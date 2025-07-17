@@ -1,0 +1,57 @@
+title: Apero SDK Release Notes
+description: Professional release notes website for Apero SDK versions and updates
+url: "https://thanh-apero.github.io"
+baseurl: ""
+
+# GitHub Pages settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+author: Apero Team
+twitter:
+  username: aperovn
+  card: summary_large_image
+
+# Social links
+github_username: AperoVN
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  releases:
+    output: true
+    permalink: /:collection/:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "releases"
+    values:
+      layout: "release"
